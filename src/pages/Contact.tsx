@@ -56,7 +56,7 @@ export default function Contact() {
 
       <section className="contact-hero">
         <div className="contact-hero-overlay">
-          <h1>Contactez-nous</h1>
+          <h1> Une question, un projet, Contactez-nous!</h1>
         </div>
       </section>
 
