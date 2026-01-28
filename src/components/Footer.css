@@ -1,0 +1,8 @@
+.footer {
+  background-color: #000; /* fond noir */
+  color: #fff;           /* texte blanc */
+  text-align: center;    /* centré horizontalement */
+  padding: 20px 0;       /* espace vertical */
+  font-family: "Gill Sans", sans-serif;
+  font-size: 1rem;
+}

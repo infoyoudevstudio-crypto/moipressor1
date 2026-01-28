@@ -1,0 +1,246 @@
+/* BASE */
+.apropos {
+  min-height: 100vh;
+  background-image: url('/images/high-colorful-powder-color-splatted-dark-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: "Gill Sans", sans-serif;
+  color: #000;
+}
+
+/* HERO */
+.apropos-hero {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.apropos-hero-overlay h2 {
+  color: white;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  font-style: italic;
+}
+
+.apropos-hero-overlay p {
+  font-size: 1.3rem;
+  color: #000;
+}
+
+/* ACCORDION SECTION */
+.apropos-stack {
+  max-width: 2000px;
+  margin: 0 auto 120px;
+  padding: 20px;
+  background-color: #d8f0f3;
+}
+
+.accordion-item {
+  background: #fff;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.accordion-item:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.accordion-trigger {
+  width: 100%;
+  padding: 24px 28px;
+  background: #fff;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-align: left;
+}
+
+.accordion-trigger:hover {
+  background: #f8f9fa;
+}
+
+.accordion-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  flex: 1;
+}
+
+.accordion-indicator {
+  font-size: 0.9rem;
+  color: #666;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.accordion-indicator.open {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.accordion-content.open {
+  max-height: 1000px;
+}
+
+.accordion-body {
+  padding: 0 28px 28px 28px;
+  position: relative;
+}
+
+.accordion-body p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+
+
+/* DEMOCRATE MEDIA */
+.apropos-groupe {
+  padding: 20px 20px;
+  background-color: #d8f0f3;
+}
+
+.apropos-groupe-content {
+  max-width: 800px;
+  margin: 30px auto 0; /* Marge en haut pour espacer de l'accordéon */
+  padding: 50px 40px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  position: relative;
+}
+
+.apropos-groupe-content h2 {
+  font-size: 2.6rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1a1a1a;
+}
+
+.apropos-groupe-content p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.apropos-groupe-icon {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 20px;
+  right: 20px;
+  object-fit: contain;
+}
+
+/* LOGOS */
+.logos-section {
+  padding: 60px 20px;
+  background: rgba(255,255,255,0.95);
+}
+
+.logos-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.logo-item {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: grayscale(30%);
+}
+
+.logo-item:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}
+
+/* CHIFFRES */
+.apropos-chiffres {
+  background: #000;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.chiffre-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.apropos-chiffres .chiffre {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.apropos-chiffres .label {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-top: 10px;
+  display: block;
+}
+
+/* LIENS */
+.groupe-link {
+  color: #1e3a8a;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.groupe-link:hover {
+  color: #3b82f6;
+  border-bottom: 2px solid #3b82f6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .apropos-hero-overlay h1 {
+    font-size: 2.2rem;
+  }
+  
+  .accordion-title {
+    font-size: 1.2rem;
+  }
+  
+  .apropos-groupe-content h2 {
+    font-size: 2rem;
+  }
+  
+  .apropos-chiffres {
+    gap: 50px;
+  }
+  
+  .apropos-chiffres .chiffre {
+    font-size: 3rem;
+  }
+}
+
