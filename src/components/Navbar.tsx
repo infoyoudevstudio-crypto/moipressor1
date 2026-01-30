@@ -28,12 +28,7 @@ export default function Navbar() {
 
       {/* Navigation */}
       <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
-        {/* CROIX mobile */}
-        <li className="close-item">
-          <button className="close-btn" onClick={toggleMenu}>
-            &times;
-          </button>
-        </li>
+       
 
         <li>
           <Link to="/" onClick={() => setMenuOpen(false)}>Accueil</Link>

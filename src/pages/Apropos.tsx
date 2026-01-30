@@ -99,6 +99,7 @@ export default function Apropos() {
           <p className="text-responsive">
             Au bénéfice d'un grand savoir-faire et d'une expérience de plus de cent trente ans dans le domaine des arts graphiques, Pressor est un partenaire reconnu en Suisse romande pour ses prestations de haute qualité.
           </p>
+          <p>Spécialiste dans l'impression offset et numérique, mais également dans la réalisation de signalisation et d'objets publicitaires, Pressor est à même de fournir une palette très large de prestations. </p>
         </>
       )
     },
@@ -200,18 +201,46 @@ export default function Apropos() {
       </section>
 
       {/* CHIFFRES */}
-      <section className="apropos-chiffres section-padding" ref={chiffresRef}>
-        <div className="flex-responsive flex-center gap-responsive">
-          <div className="chiffre-block">
-            <span className="chiffre" id="chiffre-experience">0</span>
-            <span className="label">ans d'expérience</span>
-          </div>
-          <div className="chiffre-block">
-            <span className="chiffre" id="chiffre-collaborateurs">0</span>
-            <span className="label">collaborateurs</span>
-          </div>
-        </div>
-      </section>
+<section className="apropos-chiffres section-padding" ref={chiffresRef}>
+  <div className="flex-responsive flex-center gap-responsive chiffres-grid">
+    
+    <div className="chiffre-block">
+      <span className="chiffre" id="chiffre-experience">0</span>
+      <span className="label">ans d'expérience</span>
+    </div>
+
+    <div className="chiffre-block">
+      <span className="chiffre" id="chiffre-collaborateurs">0</span>
+      <span className="label">collaborateurs</span>
+    </div>
+
+    {/* LINKEDIN */}
+    <a
+      href="https://www.linkedin.com/search/results/all/?heroEntityKey=urn%3Ali%3Aorganization%3A18537565&keywords=Pressor%20SA&origin=ENTITY_SEARCH_HOME_HISTORY&sid=nTL"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="chiffre-block linkedin-block"
+      aria-label="Suivez-nous sur LinkedIn"
+    >
+      <svg
+      className="linkedin-icon"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 448 512"
+      aria-hidden="true"
+    >
+  <path
+    fill="rgb(255, 255, 255)"
+    d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 01107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+  />
+</svg>
+
+
+      <span className="linkedin-text">Suivez-nous</span>
+    </a>
+
+  </div>
+</section>
+
 
       <Footer />
     </div>

@@ -177,3 +177,25 @@
     padding: 30px 15px;
   }
 }
+
+/* ============================================
+   MASQUER ÉLÉMENTS FIXES SUR MOBILE
+   ============================================ */
+
+/* Masquer scrollbar sur mobile */
+@media (max-width: 768px) {
+  /* Scrollbar personnalisée */
+  *::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+  /* Tout élément fixé à droite */
+  [style*="position: fixed"][style*="right"],
+  .scroll-indicator,
+  .progress-bar,
+  .level-indicator,
+  .sidebar,
+  .scrollbar-track {
+    display: none !important;
+  }
+}

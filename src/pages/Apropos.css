@@ -113,4 +113,54 @@
   .apropos-hero-overlay h2 { font-size: 1.5rem; }
   .apropos-groupe-content { padding: 30px 15px; }
 }
+/* ===== LINKEDIN – SECTION CHIFFRES ===== */
+
+.chiffres-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+
+.linkedin-block {
+  text-decoration: none;
+  cursor: pointer;
+  gap: 12px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.linkedin-block:hover {
+  transform: translateY(-2px);
+  opacity: 0.85;
+}
+
+.linkedin-icon {
+  width: 28px;
+  height: 28px;
+  background: #0a66c2;
+  border-radius: 6px;
+  padding: 4px;
+}
+
+
+.linkedin-text {
+  margin-top: 8px;
+  font-size: 0.75rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .chiffres-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .linkedin-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
 
