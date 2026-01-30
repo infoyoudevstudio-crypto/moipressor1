@@ -1,17 +1,5 @@
 /* ========================= */
-/* BASE */
-.apropos {
-  min-height: 100vh;
-  background-image: url('/images/Bloom-wallpaper-Dark.webp');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  font-family: "Gill Sans", sans-serif;
-  color: #000;
-  padding-top: 80px;
-}
-
-/* HEADER FIXE */
+/* HEADER FIXE avec transition */
 .header {
   position: fixed;
   top: 0;
@@ -26,6 +14,30 @@
   align-items: center;
   padding: 0.75rem 1rem;
   box-sizing: border-box;
+  
+  /* Animation de disparition/apparition */
+  transition: transform 0.3s ease-in-out;
+}
+
+.header.visible {
+  transform: translateY(0);
+}
+
+.header.hidden {
+  transform: translateY(-100%);
+}
+
+/* ========================= */
+/* BASE */
+.apropos {
+  min-height: 100vh;
+  background-image: url('/images/Bloom-wallpaper-Dark.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: "Gill Sans", sans-serif;
+  color: #000;
+  padding-top: 80px;
 }
 
 .logo img {
@@ -36,7 +48,7 @@
 /* ========================= */
 /* BURGER MENU */
 .burger {
-  display: none; /* visible uniquement sur mobile */
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 32px;
@@ -73,20 +85,19 @@
 /* NAV LINKS */
 .nav-links {
   display: flex;
-  flex-direction: row; /* desktop par défaut */
+  flex-direction: row;
   gap: 2rem;
   list-style: none;
   margin: 0;
   padding: 0;
   align-items: center;
-  position: static; /* desktop */
+  position: static;
   width: auto;
   height: auto;
   background: transparent;
   overflow: visible;
 }
 
-/* Liens */
 .nav-links li {
   font-size: 0.9rem;
 }
@@ -104,19 +115,16 @@
 /* ========================= */
 /* MOBILE ONLY */
 @media (max-width: 768px) {
-
-  /* Burger visible */
   .burger {
     display: flex;
   }
 
-  /* Menu latéral mobile */
   .nav-links {
     flex-direction: column;
     gap: 1.5rem;
     position: fixed;
     top: 0;
-    right: -250px; /* masqué hors écran */
+    right: -250px;
     width: 250px;
     height: 100vh;
     background: rgba(255, 255, 255, 0.95);
@@ -127,12 +135,10 @@
     overflow-y: auto;
   }
 
-  /* Menu ouvert */
   .nav-links.open {
     right: 0;
   }
 
-  /* Liens mobile */
   .nav-links li {
     font-size: 1.2rem;
     padding: 1rem 2rem;
@@ -141,20 +147,15 @@
   .nav-links li a {
     color: #ff7504;
   }
-
-  
 }
 
 /* ========================= */
 /* DESKTOP ONLY */
 @media (min-width: 769px) {
-
-  /* Burger caché */
   .burger {
     display: none;
   }
 
-  /* Menu horizontal à droite */
   .nav-links {
     position: static;
     flex-direction: row;
@@ -163,7 +164,7 @@
     background: transparent;
     padding: 0;
     overflow: visible;
-    margin-left: auto; /* <-- pousse le menu à droite */
+    margin-left: auto;
   }
 
   .nav-links li {
@@ -175,7 +176,6 @@
     color: #ff7504;
   }
 
-  /* Croix desktop cachée */
   .close-item {
     display: none;
   }
