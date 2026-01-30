@@ -9,6 +9,14 @@ export const useInertiaScroll = (ease = 0.1) => {
   const isAnimating = useRef(false)
 
   useEffect(() => {
+
+    // ✅ IMPORTANT :
+    // Désactivation complète du scroll inertiel sur mobile / tactile
+    // (le scroll custom bloque le touch scroll)
+    if (window.matchMedia('(pointer: coarse)').matches) {
+      return
+    }
+
     let timeout: number
 
     const handleWheel = (e: WheelEvent) => {
@@ -40,10 +48,17 @@ export const useInertiaScroll = (ease = 0.1) => {
       
       // Mettre à jour la cible
       targetScroll.current += velocity.current
-      targetScroll.current = Math.max(0, Math.min(targetScroll.current, document.body.scrollHeight - window.innerHeight))
+      targetScroll.current = Math.max(
+        0,
+        Math.min(
+          targetScroll.current,
+          document.body.scrollHeight - window.innerHeight
+        )
+      )
       
       // Interpolation fluide
-      currentScroll.current += (targetScroll.current - currentScroll.current) * ease
+      currentScroll.current +=
+        (targetScroll.current - currentScroll.current) * ease
       
       window.scrollTo(0, currentScroll.current)
       

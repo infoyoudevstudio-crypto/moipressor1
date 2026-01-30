@@ -1,59 +1,13 @@
-/* GLOBAL */
 .home {
   width: 100%;
   min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* NAVBAR */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 3rem;
- 
-  color: #fff;
-}
-
-.navbar-logo {
-  font-weight: bold;
-  font-size: 1.2rem;
-  letter-spacing: 2px;
-}
-
-.navbar-links {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar-links li {
-  cursor: pointer;
-  font-weight: 500;
-  position: relative;
-}
-
-.navbar-links li::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #e0c097; /* beige clair */
-  transition: width 0.3s ease;
-}
-
-.navbar-links li:hover::after {
-  width: 100%;
-}
-
 /* HERO */
 .hero {
-  height: calc(100vh - 86px); /* ajuste selon la hauteur de ta navbar */
-  background-image: url('/images/abstract-multi-colored-illustration-vibrant-fractal-shapes-generated-by-ai (1).jpg'); /* ton image ici */
+  height: calc(100vh - 86px);
+  background-image: url('/images/abstract-multi-colored-illustration-vibrant-fractal-shapes-generated-by-ai (1).jpg');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -62,7 +16,6 @@
 .hero-overlay {
   position: absolute;
   inset: 0;
-  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,37 +25,35 @@
 }
 
 .hero-overlay h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero-overlay p {
-  font-size: 1.2rem;
-  letter-spacing: 1.5px;
+  font-size: 2.5rem;
+  margin: 1rem 0;
 }
 
 .hero-logo {
-  /* TAILLE */
-  width: 700px;          /* largeur du logo (change à volonté) */
-  height: auto;          /* garde les proportions */
-
-  /* POSITION */
-  position: relative;    /* pour pouvoir le décaler */
-  top: 0px;              /* décalage vertical : positif = descendre, négatif = remonter */
-  left: 0px;             /* décalage horizontal : positif = droite, négatif = gauche */
-
-  /* MARGE */
-  margin-bottom: 1rem;   /* espace avec le texte */
+  width: 300px;
+  max-width: 70%;
+  height: auto;
+  margin-bottom: 1rem;
 }
 
 .hero-title {
-  font-family: "Gill Sans", sans-serif; /* ton choix de police */
-  font-size: 2.5rem;                   /* ajuste selon la taille désirée */
-  color: #fff;                          /* texte blanc pour contraster sur overlay */
-  margin-top: 1rem;                     /* espace sous le logo */
-  text-align: center;                   /* centré dans le hero */
-  letter-spacing: 1px;                  /* optionnel, pour un style plus propre */
+  font-family: "Gill Sans", sans-serif;
+  font-size: 1.8rem;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 1px;
 }
 
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-overlay h1 { font-size: 2rem; }
+  .hero-title { font-size: 1.5rem; }
+  .hero-logo { width: 200px; }
+}
 
+@media (max-width: 480px) {
+  .hero-overlay h1 { font-size: 1.5rem; }
+  .hero-title { font-size: 1.2rem; }
+  .hero-logo { width: 150px; }
+}
 

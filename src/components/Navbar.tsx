@@ -1,55 +1,58 @@
 import { Link } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import './Navbar.css'
 
 export default function Navbar() {
-  const [showNavbar, setShowNavbar] = useState(true)
-  const [lastScrollY, setLastScrollY] = useState(0)
+  const [menuOpen, setMenuOpen] = useState(false)
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY
-
-      if (currentScrollY > lastScrollY && currentScrollY > 400) {
-        setShowNavbar(false)
-      } else {
-        setShowNavbar(true)
-      }
-
-      setLastScrollY(currentScrollY)
-    }
-
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [lastScrollY])
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen)
+  }
 
   return (
-    <header className={`header ${showNavbar ? 'visible' : 'hidden'}`}>
-      <nav className="navbar">
-        <div className="logo">
-          <img src="/images/logo2.png" alt="Logo imprimerie" />
-        </div>
-
-        <ul className="nav-links">
-          <li><Link to="/">Accueil</Link></li>
-          <li><Link to="/apropos">À propos</Link></li>
-          <li><Link to="/savoir-faire">Savoir-faire</Link></li>
-          <li>
-            <a href="https://catalogue.pressor.ch/" target="_blank" rel="noopener noreferrer">
-              Notre catalogue
-            </a>
-          </li>
-          <li><Link to="/contact">Contactez-nous</Link></li>
-        </ul>
-      </nav>
-
-      {/* BANDE BRUNAIRE CMJN */}
-      <div className="brunaire">
-        <span className="c"></span>
-        <span className="m"></span>
-        <span className="j"></span>
-        <span className="n"></span>
+    <header className="header">
+      <div className="logo">
+        <img src="/images/logo2.png" alt="Logo imprimerie" />
       </div>
+
+      {/* Burger Menu Mobile */}
+      <button
+        className={`burger ${menuOpen ? 'open' : ''}`}
+        onClick={toggleMenu}
+        aria-label="Menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      {/* Navigation */}
+      <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
+        {/* CROIX mobile */}
+        <li className="close-item">
+          <button className="close-btn" onClick={toggleMenu}>
+            &times;
+          </button>
+        </li>
+
+        <li>
+          <Link to="/" onClick={() => setMenuOpen(false)}>Accueil</Link>
+        </li>
+        <li>
+          <Link to="/apropos" onClick={() => setMenuOpen(false)}>À propos</Link>
+        </li>
+        <li>
+          <Link to="/savoir-faire" onClick={() => setMenuOpen(false)}>Savoir-faire</Link>
+        </li>
+        <li>
+          <a href="https://catalogue.pressor.ch/" target="_blank" rel="noopener noreferrer">
+            Notre catalogue
+          </a>
+        </li>
+        <li>
+          <Link to="/contact" onClick={() => setMenuOpen(false)}>Contactez-nous</Link>
+        </li>
+      </ul>
     </header>
   )
 }
