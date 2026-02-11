@@ -1,0 +1,54 @@
+[33mcommit 96e7b5128dc71c813ad7cd3d0da5e156237f5d49[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: youdev25 <youssef_mahfoudi@hotmail.fr>
+Date:   Wed Feb 11 01:19:10 2026 +0100
+
+    Premier commit - projet moipressor
+
+[33mcommit 8a842f74d2bb8914de3b273eee5469485eac1d83[m
+Author: youdev25 <youssef_mahfoudi@hotmail.fr>
+Date:   Sat Jan 31 15:38:35 2026 +0100
+
+    mise en place debut backend manque table message
+    dans SQL Shell
+
+[33mcommit bf351f9f3d4765f42d7534cdf31058fc46dee105[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: youdev25 <youssef_mahfoudi@hotmail.fr>
+Date:   Fri Jan 30 17:29:56 2026 +0100
+
+    remis navbar qui disparait
+
+[33mcommit d31eeb98f7f2e79c890261ffe74ba0154a3aa3f9[m
+Author: youdev25 <youssef_mahfoudi@hotmail.fr>
+Date:   Fri Jan 30 17:17:33 2026 +0100
+
+    responsive indicateur niveau de page
+
+[33mcommit a14dd593e6dbb62a4569ae9220b52c1aedf171ff[m
+Author: youdev25 <youssef_mahfoudi@hotmail.fr>
+Date:   Fri Jan 30 01:38:54 2026 +0100
+
+    rendu responsive
+
+[33mcommit 317188720515f69433f6f05aab481354ed4787ec[m
+Author: youdev25 <youssef_mahfoudi@hotmail.fr>
+Date:   Thu Jan 29 00:24:03 2026 +0100
+
+    changement section chiffres dans Apropos.css
+
+[33mcommit 2f1fb4600dcfdb5f56927caa5f71583bb5a7d488[m
+Author: youdev25 <youssef_mahfoudi@hotmail.fr>
+Date:   Wed Jan 28 13:53:47 2026 +0100
+
+    Ajout .gitignore
+
+[33mcommit df3ebbe042d0b95c26fa8170b1ee9ebc58da14d6[m
+Author: youdev25 <youssef_mahfoudi@hotmail.fr>
+Date:   Wed Jan 28 13:40:53 2026 +0100
+
+    Ajout effet verre depoli et scroll inertie
+
+[33mcommit 1dfae706a35c9cb0222947a62982df08806c4d78[m
+Author: youdev25 <youssef_mahfoudi@hotmail.fr>
+Date:   Tue Jan 20 17:34:07 2026 +0100
+
+    "Initialize project"
