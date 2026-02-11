@@ -1,15 +1,62 @@
-# React Vite
+# Moipressor - Déploiement Vercel
 
-This project it a skeleton of **React** and **Vite** (and **Typescript**)! It was created to ensure a clean slate, with production grade features such as properly configured **eslint**, using **Vite** and **SWC** for a faster development experience and hot reloads. **Vite** also uses **Rollup** as a bundler, which is much more efficient than standard **Webpack**.
+## 🚀 Installation locale
 
-## Commands
+```bash
+npm install
+npm run dev
+```
 
-- npm start - run your project in development mode
-- npm run lint - check your project for any warnings via **eslint**
-- npm run format - format your project using **prettier**
-- npm run build - build your project
-- npm run preview - test your built project
+## 📦 Build de production
 
-## Types folder
+```bash
+npm run build
+npm run preview
+```
 
-The **tsconfig.json** is already set up to handle types from a `@types` folder inside the `src` directory.
+## 🌐 Déploiement sur Vercel
+
+### Méthode 1 : Via l'interface Vercel (Recommandé)
+
+1. Allez sur [vercel.com](https://vercel.com)
+2. Connectez-vous avec votre compte GitHub
+3. Cliquez sur "Add New Project"
+4. Sélectionnez le dépôt `moipressor1`
+5. Vercel détectera automatiquement Vite
+6. Cliquez sur "Deploy"
+
+### Méthode 2 : Via Vercel CLI
+
+```bash
+# Installer Vercel CLI
+npm i -g vercel
+
+# Déployer
+vercel
+```
+
+## ⚙️ Configuration Vercel
+
+Le projet est configuré via `vercel.json` :
+- **Framework**: Vite
+- **Build Command**: `npm run build`
+- **Output Directory**: `dist`
+- **Node Version**: 18.x
+
+## 📝 Scripts disponibles
+
+- `npm run dev` - Démarrer le serveur de développement
+- `npm run build` - Build de production
+- `npm run preview` - Prévisualiser le build
+- `npm run lint` - Vérifier le code
+- `npm run format` - Formater le code
+
+## 🔧 Technologies
+
+- **React** 18.2
+- **TypeScript** 5.2
+- **Vite** 4.4
+- **Material-UI** 5.14
+- **React Router** 6.30
+- **Redux Toolkit** 1.9
+- **Leaflet** (cartes)
