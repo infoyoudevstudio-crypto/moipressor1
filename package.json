@@ -6,7 +6,7 @@
   "author": "youdev25",
   "license": "MIT",
   "engines": {
-    "node": "18.x"
+    "node": "24.x"
   },
   "scripts": {
     "start": "vite --open",
