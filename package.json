@@ -13,7 +13,8 @@
     "dev": "vite",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "format": "prettier --write \"./**/*.ts\" \"./**/*.tsx\" \"./**/*.css\" \"./**/*.html\"",
-    "build": "tsc && vite build",
+    "typecheck": "tsc --noEmit",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
